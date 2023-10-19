@@ -47,9 +47,7 @@
 		"@doyensec/electronegativity": "^1.10.3",
 		"@electron-forge/cli": "^6.4.2",
 		"@electron-forge/maker-deb": "^6.4.2",
-		"@electron-forge/maker-rpm": "^6.4.2",
 		"@electron-forge/maker-squirrel": "^6.4.2",
-		"@electron-forge/maker-zip": "^6.4.2",
 		"@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
 		"@electron-forge/plugin-vite": "^6.4.2",
 		"@electron-forge/publisher-github": "^6.4.2",
@@ -69,6 +67,7 @@
 		"@typescript-eslint/eslint-plugin": "^6.8.0",
 		"@typescript-eslint/parser": "^6.8.0",
 		"@typescript/analyze-trace": "^0.10.1",
+		"@vitejs/plugin-react": "^4.1.0",
 		"@vitest/ui": "^0.34.6",
 		"cspell": "^7.3.8",
 		"electron": "27.0.1",
@@ -94,6 +93,7 @@
 		"svgo": "^3.0.2",
 		"tsx": "^3.14.0",
 		"typescript": "~5.2.2",
+		"vite-plugin-eslint": "^1.8.1",
 		"vite-tsconfig-paths": "^4.2.1",
 		"vitest": "^0.34.6"
 	}
