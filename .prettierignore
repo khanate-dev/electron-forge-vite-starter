@@ -6,4 +6,5 @@ dist
 build
 pnpm-lock.yaml
 .webpack
+.vite
 trace

@@ -1,8 +1,8 @@
 {
-	"name": "my-new-app",
-	"productName": "my-new-app",
+	"name": "electron-starter",
+	"productName": "electron-starter",
 	"version": "1.0.0",
-	"description": "My Electron application description",
+	"description": "Electron React Starter Application",
 	"main": ".vite/build/main.js",
 	"scripts": {
 		"start": "DEV=1 electron-forge start",
