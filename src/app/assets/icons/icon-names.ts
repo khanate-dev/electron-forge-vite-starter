@@ -1,0 +1,42 @@
+//? Auto-generated from the generate-icon script.
+//! DO NOT CHANGE MANUALLY!
+
+export const iconNames = [
+	'ppc-order',
+	'scanning-transfer',
+	'settings',
+	'skill-level',
+	'box-assign',
+	'box',
+	'cut-job',
+	'cut-report',
+	'fault',
+	'line',
+	'logout',
+	'machine-assign',
+	'machine-type',
+	'machine',
+	'marker',
+	'operation',
+	'production-order',
+	'sale-order',
+	'scanning-delete',
+	'section',
+	'style',
+	'toggle-sidebar',
+	'user',
+	'worker',
+	'bottom',
+	'cutting',
+	'order-generation',
+	'planning',
+	'quality',
+	'smart-box-allocation',
+	'stitching',
+	'dark-mode',
+	'light-mode',
+	'sort',
+	'system-mode',
+] as const;
+
+export type IconName = (typeof iconNames)[number];
