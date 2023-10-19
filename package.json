@@ -5,11 +5,21 @@
 	"description": "My Electron application description",
 	"main": ".vite/build/main.js",
 	"scripts": {
-		"start": "electron-forge start",
+		"start": "DEV=1 electron-forge start",
 		"package": "electron-forge package",
 		"make": "electron-forge make",
 		"publish": "electron-forge publish",
-		"lint": "eslint --ext .ts,.tsx ."
+		"test": "vitest watch",
+		"test-ui": "vitest --ui",
+		"typecheck": "vitest typecheck",
+		"lint": "eslint . --fix --report-unused-disable-directives && pnpm format && pnpm spellcheck",
+		"format": "prettier --write --log-level silent .",
+		"spellcheck": "cspell . --quiet",
+		"generate-icons": "tsx ./scripts/generate-icons.ts",
+		"generate-favicons": "electron-icon-builder --input=./src/app/assets/favicon/favicon.png --output=./src/app/assets/favicon",
+		"audit": "electronegativity -i ./",
+		"diag": "tsc --extendedDiagnostics",
+		"trace": "tsc --generateTrace ./trace && npx @typescript/analyze-trace trace"
 	},
 	"keywords": [],
 	"author": {
