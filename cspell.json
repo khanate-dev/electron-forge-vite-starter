@@ -1,0 +1,36 @@
+{
+	"words": [
+		"ampm",
+		"asar",
+		"datetime",
+		"doyensec",
+		"electronegativity",
+		"evenodd",
+		"favicons",
+		"icns",
+		"pmmmwh",
+		"prebuilds",
+		"relocator",
+		"revalidator",
+		"sooperwizer",
+		"typecheck",
+		"wimetrix",
+		"xlink"
+	],
+	"ignorePaths": [
+		"package-lock.json",
+		"pnpm-lock.yaml",
+		"node_modules",
+		"vscode-extension",
+		".git/objects",
+		".vscode",
+		".vscode-insiders",
+		"coverage",
+		"build",
+		"dist",
+		"public",
+		"trace",
+		".webpack",
+		"**/*.{mp3,otf,icns}"
+	]
+}
