@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 
-import { Dropzone } from '../../components/controls/dropzone.component';
+import { Dropzone } from '../controls/dropzone.component';
 import { humanizeToken } from '../../helpers/humanize-token.helpers';
 import {
 	csx,

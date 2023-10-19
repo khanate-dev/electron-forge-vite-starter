@@ -2,10 +2,12 @@ import { Drawer, IconButton, List, Stack, keyframes } from '@mui/material';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
-import { AppIcon } from '../../components/media/app-icon.component';
-import { AppLogo } from '../../components/media/app-logo.component';
-import { AppLink } from '../../components/navigation/app-link.component';
+import { SidebarGroup } from './sidebar-group.component';
+
+import { CustomButton } from '../controls/custom-button.component';
+import { AppIcon } from '../media/app-icon.component';
+import { AppLogo } from '../media/app-logo.component';
+import { AppLink } from '../navigation/app-link.component';
 import {
 	APP_HEADER_HEIGHT,
 	DRAWER_MINIMIZED_WIDTH,
@@ -16,8 +18,6 @@ import { dashboardRoutes } from '../../dashboard.routes';
 import { formatToken } from '../../helpers/format-token.helpers';
 import { scrollStyles } from '../../helpers/style.helpers';
 import { logout, useUser } from '../../hooks/user.hook';
-
-import { SidebarGroup } from './sidebar-group.component';
 
 import type { MouseEventHandler } from 'react';
 import type { UserType } from '../../schemas/user.schema';

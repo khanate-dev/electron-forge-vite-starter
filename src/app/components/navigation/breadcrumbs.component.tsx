@@ -2,7 +2,8 @@ import { HomeOutlined as HomeIcon } from '@mui/icons-material';
 import { Box, Breadcrumbs as MuiBreadcrumbs, keyframes } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 
-import { AppLink } from '../../components/navigation/app-link.component';
+import { AppLink } from './app-link.component';
+
 import { humanizeToken } from '../../helpers/humanize-token.helpers';
 
 import type { Mui } from '../../types/mui.types';

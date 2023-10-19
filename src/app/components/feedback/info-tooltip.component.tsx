@@ -2,10 +2,11 @@ import { InfoOutlined as InfoIcon } from '@mui/icons-material';
 import { ClickAwayListener, IconButton, Popper } from '@mui/material';
 import { useState } from 'react';
 
-import { CustomTooltip } from '../../components/feedback/custom-tooltip.component';
+import { CustomTooltip } from './custom-tooltip.component';
+
 import { csx } from '../../helpers/style.helpers';
 
-import type { CustomTooltipProps } from '../../components/feedback/custom-tooltip.component';
+import type { CustomTooltipProps } from './custom-tooltip.component';
 
 export const InfoTooltip = ({
 	sx,

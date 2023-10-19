@@ -8,9 +8,9 @@ import {
 	Typography,
 } from '@mui/material';
 
-import { CustomTooltip } from '../../components/feedback/custom-tooltip.component';
-import { AppIcon } from '../../components/media/app-icon.component';
-import { AppLink } from '../../components/navigation/app-link.component';
+import { CustomTooltip } from '../feedback/custom-tooltip.component';
+import { AppIcon } from '../media/app-icon.component';
+import { AppLink } from '../navigation/app-link.component';
 import { SIDEBAR_GROUPS_LABELS } from '../../constants';
 import { humanizeToken } from '../../helpers/humanize-token.helpers';
 import {
@@ -19,10 +19,7 @@ import {
 	wrappedTextStyle,
 } from '../../helpers/style.helpers';
 
-import type {
-	SidebarItemType,
-	TSidebarGroup,
-} from '../../components/panels/sidebar.component';
+import type { SidebarItemType, TSidebarGroup } from './sidebar.component';
 import type { Mui } from '../../types/mui.types';
 
 export type SidebarGroupProps = Mui.propsWithSx<{

@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material';
 
-import { CustomTooltip } from '../../components/feedback/custom-tooltip.component';
+import { CustomTooltip } from '../feedback/custom-tooltip.component';
 import { csx, wrappedTextStyle } from '../../helpers/style.helpers';
 
 import type { TextFieldProps } from '@mui/material';

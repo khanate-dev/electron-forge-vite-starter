@@ -18,8 +18,8 @@ import {
 	useTheme,
 } from '@mui/material';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
-import { SortButton } from '../../components/controls/sort-button.component';
+import { CustomButton } from '../controls/custom-button.component';
+import { SortButton } from '../controls/sort-button.component';
 import { PAGINATION_SIZES } from '../../constants';
 import { humanizeToken } from '../../helpers/humanize-token.helpers';
 import {

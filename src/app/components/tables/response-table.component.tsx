@@ -5,17 +5,18 @@ import {
 } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
-import { CustomAlert } from '../../components/feedback/custom-alert.component';
-import { InfoTooltip } from '../../components/feedback/info-tooltip.component';
-import { GeneralTable } from '../../components/tables/general-table.component';
+import { GeneralTable } from './general-table.component';
+
+import { CustomButton } from '../controls/custom-button.component';
+import { CustomAlert } from '../feedback/custom-alert.component';
+import { InfoTooltip } from '../feedback/info-tooltip.component';
 import { pluralize } from '../../helpers/pluralize.helpers';
 import { wrappedTextStyle } from '../../helpers/style.helpers';
 
 import type {
 	GeneralTableColumn,
 	GeneralTableStyles,
-} from '../../components/tables/general-table.component';
+} from './general-table.component';
 import type { BulkResponse } from '../../helpers/api.helpers';
 import type { Mui } from '../../types/mui.types';
 

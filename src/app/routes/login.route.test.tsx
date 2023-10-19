@@ -2,9 +2,9 @@ import '@testing-library/jest-dom';
 
 import { act } from '@testing-library/react';
 
-import { renderWithProviders } from '../helpers/test.helpers';
-
 import { Login } from './login.route';
+
+import { renderWithProviders } from '../helpers/test.helpers';
 
 type SetupParams = {
 	username?: string;

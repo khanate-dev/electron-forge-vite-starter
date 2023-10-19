@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { addToast } from './toast.helpers';
+
 import { backendPath, disableAuth, isFetchMocked } from '../app.config';
 import {
 	ApiError,
@@ -12,8 +14,6 @@ import {
 	logout,
 	updateLocalStorageUser,
 } from '../hooks/user.hook';
-
-import { addToast } from './toast.helpers';
 
 import type { Utils } from '../../shared/types/utils.types';
 

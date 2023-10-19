@@ -9,9 +9,9 @@ import {
 	useRouteError,
 } from 'react-router-dom';
 
-import { EmptyPage } from '../../components/containers/empty-page.component';
-import { CustomButton } from '../../components/controls/custom-button.component';
-import { AppIcon } from '../../components/media/app-icon.component';
+import { EmptyPage } from '../containers/empty-page.component';
+import { CustomButton } from '../controls/custom-button.component';
+import { AppIcon } from '../media/app-icon.component';
 import { AuthError } from '../../errors';
 import { wrappedTextStyle } from '../../helpers/style.helpers';
 import { logout } from '../../hooks/user.hook';

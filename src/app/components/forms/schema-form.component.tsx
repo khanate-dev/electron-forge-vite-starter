@@ -1,9 +1,10 @@
 import { Box, Stack } from '@mui/material';
 import { useReducer, useState } from 'react';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
-import { FormField } from '../../components/forms/form-field.component';
-import { FormImage } from '../../components/forms/form-image.component';
+import { FormField } from './form-field.component';
+import { FormImage } from './form-image.component';
+
+import { CustomButton } from '../controls/custom-button.component';
 import { getImageUrl } from '../../helpers/image.helpers';
 import { csx } from '../../helpers/style.helpers';
 import { useStatus } from '../../hooks/status.hook';

@@ -8,18 +8,10 @@ import installExtension, {
 import { electronConfig } from './electron.config';
 import { setupIpc } from './ipc';
 
-declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
-declare const MAIN_WINDOW_VITE_NAME: string;
-
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) {
-	app.quit();
-}
+if (require('electron-squirrel-startup')) app.quit();
 
 // TODO Find a way to disallow dom types in shared and electron folder
-
-const entryUrl = MAIN_WINDOW_VITE_DEV_SERVER_URL ?? '';
-console.log({ MAIN_WINDOW_VITE_DEV_SERVER_URL });
 
 const createWindow = () => {
 	// Create the browser window.
@@ -85,17 +77,13 @@ app.on('ready', createWindow);
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
+	if (process.platform !== 'darwin') app.quit();
 });
 
 app.on('activate', () => {
 	// On OS X it's common to re-create a window in the app when the
 	// dock icon is clicked and there are no other windows open.
-	if (BrowserWindow.getAllWindows().length === 0) {
-		createWindow();
-	}
+	if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
 
 app.on('web-contents-created', (_, contents) => {
@@ -107,6 +95,7 @@ app.on('web-contents-created', (_, contents) => {
 	// ? https://www.electronjs.org/docs/latest/tutorial/security#13-disable-or-limit-navigation
 	contents.on('will-navigate', (event, url) => {
 		const parsedUrl = new URL(url);
+		// TODO use the correct path here
 		if (parsedUrl.origin !== MAIN_WINDOW_VITE_NAME) event.preventDefault();
 	});
 

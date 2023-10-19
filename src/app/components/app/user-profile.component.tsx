@@ -2,10 +2,10 @@ import { Divider, IconButton, Popover, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 
 import { FormSchema } from '../../classes/form-schema.class';
-import { CustomButton } from '../../components/controls/custom-button.component';
-import { SchemaForm } from '../../components/forms/schema-form.component';
-import { AppIcon } from '../../components/media/app-icon.component';
-import { CustomAvatar } from '../../components/media/custom-avatar.component';
+import { CustomButton } from '../controls/custom-button.component';
+import { SchemaForm } from '../forms/schema-form.component';
+import { AppIcon } from '../media/app-icon.component';
+import { CustomAvatar } from '../media/custom-avatar.component';
 import { resetUserPassword } from '../../endpoints/user.endpoints';
 import { getImageUrl } from '../../helpers/image.helpers';
 import { logout, useUser } from '../../hooks/user.hook';

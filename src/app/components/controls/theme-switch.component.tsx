@@ -1,6 +1,6 @@
 import { IconButton, Stack } from '@mui/material';
 
-import { AppIcon } from '../../components/media/app-icon.component';
+import { AppIcon } from '../media/app-icon.component';
 import { csx } from '../../helpers/style.helpers';
 import { toggleMode, useStoredMode } from '../../hooks/mode.hook';
 

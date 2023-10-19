@@ -8,11 +8,12 @@ import { Stack } from '@mui/material';
 import { useState } from 'react';
 import { z } from 'zod';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
-import { GeneralDialog } from '../../components/dialogs/general-dialog.component';
-import { FormField } from '../../components/forms/form-field.component';
-import { GeneralTable } from '../../components/tables/general-table.component';
-import { ResponseTable } from '../../components/tables/response-table.component';
+import { GeneralTable } from './general-table.component';
+import { ResponseTable } from './response-table.component';
+
+import { CustomButton } from '../controls/custom-button.component';
+import { GeneralDialog } from '../dialogs/general-dialog.component';
+import { FormField } from '../forms/form-field.component';
 import { createLocalId } from '../../helpers/data.helpers';
 import { localIdSchema } from '../../helpers/schema.helpers';
 import { csx } from '../../helpers/style.helpers';
@@ -26,13 +27,13 @@ import type {
 	FormSuggestLists,
 	FormWorkingObj,
 } from '../../classes/form-schema.class';
-import type { CustomButtonProps } from '../../components/controls/custom-button.component';
+import type { CustomButtonProps } from '../controls/custom-button.component';
 import type {
 	GeneralTableAction,
 	GeneralTableColumn,
 	GeneralTableProps,
 	GeneralTableStyles,
-} from '../../components/tables/general-table.component';
+} from './general-table.component';
 import type { BulkResponse } from '../../helpers/api.helpers';
 import type { SortDirection } from '../../hooks/sorting.hook';
 import type { StatusUpdate, useStatus } from '../../hooks/status.hook';

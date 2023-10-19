@@ -250,14 +250,11 @@ const config = {
 				'vitest/prefer-expect-assertions': 'off',
 				'vitest/require-top-level-describe': 'off',
 				'vitest/max-expects': ['error', { max: 10 }],
-				'testing-library/no-manual-cleanup': 'warn',
-				'testing-library/no-global-regexp-flag-in-query': 'warn',
 				'testing-library/prefer-explicit-assert': [
 					'error',
 					{ assertion: 'toBeInTheDocument' },
 				],
 				'testing-library/prefer-user-event': 'warn',
-				'testing-library/prefer-wait-for': 'warn',
 			},
 		},
 		{

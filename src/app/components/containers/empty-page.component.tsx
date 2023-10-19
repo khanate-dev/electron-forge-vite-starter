@@ -1,6 +1,6 @@
 import { Box, keyframes } from '@mui/material';
 
-import { BackgroundImage } from '../../components/media/background-image.component';
+import { BackgroundImage } from '../media/background-image.component';
 import { csx } from '../../helpers/style.helpers';
 
 import type { ReactNode } from 'react';

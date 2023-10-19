@@ -1,5 +1,6 @@
-import { stringifyError } from '../errors';
 import { createBulkResponseSchema } from './schema.helpers';
+
+import { stringifyError } from '../errors';
 
 import type { z } from 'zod';
 import type { Utils } from '../../shared/types/utils.types';

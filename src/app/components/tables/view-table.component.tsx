@@ -4,8 +4,9 @@ import {
 	Visibility as ViewIcon,
 } from '@mui/icons-material';
 
-import { CustomAvatar } from '../../components/media/custom-avatar.component';
-import { GeneralTable } from '../../components/tables/general-table.component';
+import { GeneralTable } from './general-table.component';
+
+import { CustomAvatar } from '../media/custom-avatar.component';
 import { viewToGeneralTableColumns } from '../../helpers/table.helpers';
 
 import type { Dayjs } from 'dayjs';
@@ -15,7 +16,7 @@ import type {
 	GeneralTableAction,
 	GeneralTableProps,
 	GeneralTableStyles,
-} from '../../components/tables/general-table.component';
+} from './general-table.component';
 import type { SortDirection } from '../../hooks/sorting.hook';
 import type { App } from '../../types/app.types';
 import type { Mui } from '../../types/mui.types';

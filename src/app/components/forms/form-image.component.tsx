@@ -1,8 +1,8 @@
 import { Stack } from '@mui/material';
 import { useState } from 'react';
 
-import { FileUploadButton } from '../../components/controls/file-upload-button.component';
-import { CustomAvatar } from '../../components/media/custom-avatar.component';
+import { FileUploadButton } from '../controls/file-upload-button.component';
+import { CustomAvatar } from '../media/custom-avatar.component';
 import { IMAGE_EXTENSIONS } from '../../constants';
 import { assertValidImage } from '../../helpers/image.helpers';
 import { csx } from '../../helpers/style.helpers';

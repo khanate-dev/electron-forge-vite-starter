@@ -10,7 +10,6 @@ import { Dashboard } from './routes/dashboard/dashboard.route';
 import { Welcome } from './routes/dashboard/welcome.route';
 import { Login } from './routes/login.route';
 import { getMuiTheme } from './theme';
-
 import { dashboardRoutes } from './dashboard.routes';
 import { useMode } from './hooks/mode.hook';
 import { Example } from './routes/example.route';

@@ -8,12 +8,12 @@ import {
 	alpha,
 } from '@mui/material';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
+import { CustomButton } from '../controls/custom-button.component';
 import { csx, scrollStyles } from '../../helpers/style.helpers';
 
 import type { DialogProps } from '@mui/material';
 import type { ReactNode } from 'react';
-import type { FullButtonProps } from '../../components/controls/custom-button.component';
+import type { FullButtonProps } from '../controls/custom-button.component';
 import type { Mui } from '../../types/mui.types';
 
 export type GeneralDialogAction = FullButtonProps;

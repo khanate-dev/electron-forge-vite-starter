@@ -4,7 +4,7 @@ import {
 } from '@mui/icons-material';
 import { Divider, Stack, Step, StepLabel, Stepper } from '@mui/material';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
+import { CustomButton } from '../controls/custom-button.component';
 import {
 	pageTransitionStyles,
 	scrollStyles,

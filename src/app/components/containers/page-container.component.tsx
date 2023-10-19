@@ -14,7 +14,7 @@ import {
 import { Paper, Stack, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-import { CustomButton } from '../../components/controls/custom-button.component';
+import { CustomButton } from '../controls/custom-button.component';
 import { PAGE_HEADER_HEIGHT } from '../../constants';
 import { humanizeToken } from '../../helpers/humanize-token.helpers';
 import {
@@ -28,7 +28,7 @@ import { useUser } from '../../hooks/user.hook';
 import type { ReactNode } from 'react';
 import type { To } from 'react-router-dom';
 import type { Utils } from '../../../shared/types/utils.types';
-import type { FullButtonProps } from '../../components/controls/custom-button.component';
+import type { FullButtonProps } from '../controls/custom-button.component';
 import type { UserType } from '../../schemas/user.schema';
 import type { Mui } from '../../types/mui.types';
 
