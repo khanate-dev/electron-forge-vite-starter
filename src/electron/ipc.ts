@@ -3,7 +3,7 @@ import os from 'os';
 
 import { SerialPort } from 'serialport';
 
-import { ipcMain } from '~/shared/ipc-spec';
+import { ipcMain } from '../shared/ipc-spec';
 
 import type { BrowserWindow } from 'electron';
 

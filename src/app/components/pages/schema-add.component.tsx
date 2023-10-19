@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 
-import { PageContainer } from '~/app/components/containers/page-container.component';
-import { SchemaForm } from '~/app/components/forms/schema-form.component';
+import { PageContainer } from '../../components/containers/page-container.component';
+import { SchemaForm } from '../../components/forms/schema-form.component';
 
-import type { FormSchema } from '~/app/classes/form-schema.class';
+import type { FormSchema } from '../../classes/form-schema.class';
 import type {
 	AddSchemaFormProps,
 	SchemaFormSubmitData,
-} from '~/app/components/forms/schema-form.component';
+} from '../../components/forms/schema-form.component';
 
 export type SchemaAddProps<
 	T extends FormSchema,

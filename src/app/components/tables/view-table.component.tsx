@@ -4,21 +4,21 @@ import {
 	Visibility as ViewIcon,
 } from '@mui/icons-material';
 
-import { CustomAvatar } from '~/app/components/media/custom-avatar.component';
-import { GeneralTable } from '~/app/components/tables/general-table.component';
-import { viewToGeneralTableColumns } from '~/app/helpers/table.helpers';
+import { CustomAvatar } from '../../components/media/custom-avatar.component';
+import { GeneralTable } from '../../components/tables/general-table.component';
+import { viewToGeneralTableColumns } from '../../helpers/table.helpers';
 
 import type { Dayjs } from 'dayjs';
 import type { ReactNode } from 'react';
+import type { Utils } from '../../../shared/types/utils.types';
 import type {
 	GeneralTableAction,
 	GeneralTableProps,
 	GeneralTableStyles,
-} from '~/app/components/tables/general-table.component';
-import type { SortDirection } from '~/app/hooks/sorting.hook';
-import type { App } from '~/app/types/app.types';
-import type { Mui } from '~/app/types/mui.types';
-import type { Utils } from '~/shared/types/utils.types';
+} from '../../components/tables/general-table.component';
+import type { SortDirection } from '../../hooks/sorting.hook';
+import type { App } from '../../types/app.types';
+import type { Mui } from '../../types/mui.types';
 
 export type ViewColumnKey<T extends Obj> = keyof T | (string & {});
 

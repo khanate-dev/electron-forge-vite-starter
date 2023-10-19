@@ -1,12 +1,12 @@
-import type { BaseSelectionType } from '~/app/classes/form-schema.class';
-import type { ENVIRONMENTS } from '~/app/constants';
+import type { Utils } from '../../shared/types/utils.types';
+import type { BaseSelectionType } from '../classes/form-schema.class';
+import type { ENVIRONMENTS } from '../constants';
 import type {
 	ZodDbId,
 	ZodLocalId,
 	ZodNumberSelection,
 	ZodStringSelection,
-} from '~/shared/helpers/schema.helpers';
-import type { Utils } from '~/shared/types/utils.types';
+} from '../helpers/schema.helpers';
 
 export declare namespace App {
 	/** global union type of possible app environment */

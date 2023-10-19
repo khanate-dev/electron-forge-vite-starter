@@ -8,14 +8,14 @@ import {
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-import { CustomButton } from '~/app/components/controls/custom-button.component';
-import { ThemeSwitch } from '~/app/components/controls/theme-switch.component';
-import { AppLogo } from '~/app/components/media/app-logo.component';
-import { BackgroundImage } from '~/app/components/media/background-image.component';
-import { WiMetrixLogo } from '~/app/components/media/wimetrix-logo.component';
-import { LOGIN_HEADER_HEIGHT } from '~/app/constants';
-import { stringifyError } from '~/shared/errors';
-import { dayjsUtc } from '~/shared/helpers/date.helpers';
+import { CustomButton } from '../components/controls/custom-button.component';
+import { ThemeSwitch } from '../components/controls/theme-switch.component';
+import { AppLogo } from '../components/media/app-logo.component';
+import { BackgroundImage } from '../components/media/background-image.component';
+import { WiMetrixLogo } from '../components/media/wimetrix-logo.component';
+import { LOGIN_HEADER_HEIGHT } from '../constants';
+import { stringifyError } from '../errors';
+import { dayjsUtc } from '../helpers/date.helpers';
 
 const headerLogoSx = {
 	width: 'auto',

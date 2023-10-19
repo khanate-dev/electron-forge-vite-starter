@@ -5,19 +5,19 @@ import {
 } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
 
-import { CustomButton } from '~/app/components/controls/custom-button.component';
-import { CustomAlert } from '~/app/components/feedback/custom-alert.component';
-import { InfoTooltip } from '~/app/components/feedback/info-tooltip.component';
-import { GeneralTable } from '~/app/components/tables/general-table.component';
-import { wrappedTextStyle } from '~/app/helpers/style.helpers';
-import { pluralize } from '~/shared/helpers/pluralize.helpers';
+import { CustomButton } from '../../components/controls/custom-button.component';
+import { CustomAlert } from '../../components/feedback/custom-alert.component';
+import { InfoTooltip } from '../../components/feedback/info-tooltip.component';
+import { GeneralTable } from '../../components/tables/general-table.component';
+import { pluralize } from '../../helpers/pluralize.helpers';
+import { wrappedTextStyle } from '../../helpers/style.helpers';
 
 import type {
 	GeneralTableColumn,
 	GeneralTableStyles,
-} from '~/app/components/tables/general-table.component';
-import type { BulkResponse } from '~/app/helpers/api.helpers';
-import type { Mui } from '~/app/types/mui.types';
+} from '../../components/tables/general-table.component';
+import type { BulkResponse } from '../../helpers/api.helpers';
+import type { Mui } from '../../types/mui.types';
 
 const alertStyle = {
 	gap: 0.5,
