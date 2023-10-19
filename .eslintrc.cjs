@@ -1,10 +1,3 @@
-const noParentImport = {
-	group: ['../*'],
-	message: 'Do not use parent imports',
-};
-
-const projectPaths = ['./tsconfig.renderer.json', './tsconfig.main.json'];
-
 /** @type {import('eslint').Linter.Config} */
 const config = {
 	env: {
@@ -24,13 +17,11 @@ const config = {
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
-		project: projectPaths,
+		project: true,
+		tsconfigRootDir: __dirname,
 	},
 	settings: {
-		'import/resolver': {
-			typescript: true,
-			projectPaths,
-		},
+		'import/resolver': { typescript: true },
 	},
 	rules: {
 		'array-callback-return': ['warn', { checkForEach: true }],
@@ -67,12 +58,6 @@ const config = {
 		'no-octal-escape': 'warn',
 		'no-param-reassign': 'warn',
 		'no-promise-executor-return': 'warn',
-		'no-restricted-imports': [
-			'error',
-			{
-				patterns: [noParentImport],
-			},
-		],
 		'no-restricted-syntax': [
 			'error',
 			{
@@ -151,7 +136,7 @@ const config = {
 
 		'@typescript-eslint/consistent-type-exports': 'warn',
 		'@typescript-eslint/consistent-type-imports': 'warn',
-		'@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
+		'@typescript-eslint/consistent-type-definitions': 'off',
 		'@typescript-eslint/default-param-last': 'warn',
 		'no-dupe-class-members': 'off',
 		'@typescript-eslint/no-dupe-class-members': 'warn',
@@ -298,7 +283,6 @@ const config = {
 					'error',
 					{
 						patterns: [
-							noParentImport,
 							{
 								group: ['electron/*', 'serialport/*'],
 								message: 'Not available in the renderer',
@@ -318,13 +302,6 @@ const config = {
 				'no-restricted-imports': [
 					'error',
 					{
-						patterns: [
-							noParentImport,
-							{
-								group: ['@renderer/*'],
-								message: 'Do not use app modules in electron',
-							},
-						],
 						paths: [
 							{
 								name: 'electron',
