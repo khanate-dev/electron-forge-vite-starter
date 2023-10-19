@@ -40,6 +40,7 @@ const createWindow = () => {
 		);
 	}
 
+	// TODO Causes problems
 	if (electronConfig.isDev) {
 		installExtension(REACT_DEVELOPER_TOOLS)
 			.then(() => {
