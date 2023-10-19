@@ -18,6 +18,11 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.14",
+    "@mui/x-date-pickers": "^6.16.2",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
