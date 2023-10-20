@@ -9,5 +9,5 @@ export const electronConfig = {
 		owner: 'khanate-dev',
 		name: 'electron-starter',
 	},
-	env: MAIN_WINDOW_VITE_DEV_SERVER_URL ? 'development' : 'production',
+	env: process.env.DEV ? 'development' : 'production',
 } as const;
