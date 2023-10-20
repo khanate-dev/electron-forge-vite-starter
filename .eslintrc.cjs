@@ -290,11 +290,8 @@ const config = {
 			},
 		},
 		{
-			files: ['./src/electron/**/*', './src/preload/**/*'],
-			env: {
-				es2021: true,
-				node: true,
-			},
+			files: ['./src/electron/**/*'],
+			env: { es2021: true, node: true },
 			rules: {
 				'no-restricted-imports': [
 					'error',
