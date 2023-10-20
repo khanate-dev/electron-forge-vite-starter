@@ -24,22 +24,29 @@ export const setupIpc = (mainWindow: BrowserWindow) => {
 		app.exit(exitCode);
 	});
 
-	ipcMain.handle('barCodeConnect', async () => {
+	ipcMain.handle('codeReaderConnect', async () => {
 		return new Promise<void>((resolve, reject) => {
 			if (reader.isPaused()) {
 				reader.resume();
+				resolve();
 				return;
 			}
-			if (reader.isOpen || reader.opening) return;
+			if (reader.isOpen || reader.opening) {
+				resolve();
+				return;
+			}
 			reader.open((error) => {
 				error ? reject(error) : resolve();
 			});
 		});
 	});
 
-	ipcMain.handle('barCodeDisconnect', async () => {
+	ipcMain.handle('codeReaderDisconnect', async () => {
 		return new Promise<void>((resolve, reject) => {
-			if (!reader.isOpen || reader.closing) return;
+			if (!reader.isOpen || reader.closing) {
+				resolve();
+				return;
+			}
 			reader.close((error) => {
 				error ? reject(error) : resolve();
 			});
@@ -51,6 +58,6 @@ export const setupIpc = (mainWindow: BrowserWindow) => {
 			data as { toString(encoding: string): string }
 		).toString('utf-8');
 		const newBarCodeScan = parseInt(dataString);
-		ipcMain.send('barCodeListen', mainWindow, newBarCodeScan);
+		ipcMain.send('codeReaderListen', mainWindow, newBarCodeScan);
 	});
 };

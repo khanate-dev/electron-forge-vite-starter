@@ -13,15 +13,15 @@ const ipcApi: IpcApi = {
 			ipcRenderer.send('appExit');
 		},
 	},
-	barCode: {
+	codeReader: {
 		async connect() {
-			return ipcRenderer.invoke('barCodeConnect');
+			return ipcRenderer.invoke('codeReaderConnect');
 		},
 		async disconnect() {
-			return ipcRenderer.invoke('barCodeDisconnect');
+			return ipcRenderer.invoke('codeReaderDisconnect');
 		},
 		listen(callback) {
-			ipcRenderer.on('barCodeListen', (_event, value) => {
+			ipcRenderer.on('codeReaderListen', (_event, value) => {
 				callback(value);
 			});
 		},

@@ -32,29 +32,26 @@ const createWindow = () => {
 	});
 
 	// and load the index.html of the app.
-	if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
+	if (electronConfig.env === 'development') {
+		console.info(`\n\nREACHED DEV: ${MAIN_WINDOW_VITE_DEV_SERVER_URL}\n\n`);
 		mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
 	} else {
+		console.info(`\n\nREACHED PROD: ${MAIN_WINDOW_VITE_NAME}\n\n`);
 		mainWindow.loadFile(
 			path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
 		);
 	}
 
-	// TODO Causes problems
-	if (electronConfig.isDev) {
-		installExtension(REACT_DEVELOPER_TOOLS)
-			.then(() => {
-				const win = BrowserWindow.getFocusedWindow();
-				win?.webContents.on('did-frame-finish-load', () => {
-					win.webContents.once('devtools-opened', () => {
-						win.webContents.focus();
-					});
-					win.webContents.openDevTools({ mode: 'detach' });
-				});
-			})
-			.catch((err) => {
-				console.warn('Could Not Load React DevTools:', err);
-			});
+	// Setup IPC handlers and listeners.
+	setupIpc(mainWindow);
+
+	// Causes 2 warnings:
+	// 1. Manifest version 2
+	// 2. object null is not iterable
+	if (electronConfig.env === 'development') {
+		installExtension(REACT_DEVELOPER_TOOLS).catch((err) => {
+			console.warn('Could Not Load React DevTools:', err);
+		});
 	}
 
 	// ? https://github.com/doyensec/electronegativity/wiki/PERMISSION_REQUEST_HANDLER_GLOBAL_CHECK
@@ -64,9 +61,6 @@ const createWindow = () => {
 			callback(allowed.includes(permission));
 		},
 	);
-
-	// Setup IPC handlers and listeners.
-	setupIpc(mainWindow);
 };
 
 // This method will be called when Electron has finished
@@ -94,10 +88,8 @@ app.on('web-contents-created', (_, contents) => {
 	});
 
 	// ? https://www.electronjs.org/docs/latest/tutorial/security#13-disable-or-limit-navigation
-	contents.on('will-navigate', (event, url) => {
-		const parsedUrl = new URL(url);
-		// TODO use the correct path here
-		if (parsedUrl.origin !== MAIN_WINDOW_VITE_NAME) event.preventDefault();
+	contents.on('will-navigate', (event) => {
+		event.preventDefault();
 	});
 
 	// ? https://www.electronjs.org/docs/latest/tutorial/security#14-disable-or-limit-creation-of-new-windows

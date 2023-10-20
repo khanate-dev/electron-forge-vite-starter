@@ -10,7 +10,7 @@ export type IpcApi = {
 	app: Pick<App, 'exit'> & {
 		env: 'development' | 'production';
 	};
-	barCode: {
+	codeReader: {
 		connect: () => Promise<void>;
 		disconnect: () => Promise<void>;
 		listen: (listener: (value: number) => void) => void;
@@ -149,13 +149,14 @@ type IpcMain = {
 	): void;
 };
 
-declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
-
 // ? https://www.electronjs.org/docs/latest/tutorial/security#17-validate-the-sender-of-all-ipc-messages
 const validateSender = (
 	event: Electron.IpcMainEvent | Electron.IpcMainInvokeEvent,
 ): boolean => {
-	return event.senderFrame.url === MAIN_WINDOW_WEBPACK_ENTRY;
+	// TODO Fix the path here
+	// return event.senderFrame.url === MAIN_WINDOW_VITE_DEV_SERVER_URL;
+	console.log({ url: event.senderFrame.url });
+	return true;
 };
 
 export const ipcMain: IpcMain = {
