@@ -5,7 +5,7 @@
 	"description": "Electron React Starter Application",
 	"main": ".vite/build/main.js",
 	"scripts": {
-		"start": "DEV=1 electron-forge start",
+		"start": "cross-env DEV=1 electron-forge start",
 		"package": "electron-forge package",
 		"make": "electron-forge make",
 		"publish": "electron-forge publish",
@@ -68,6 +68,7 @@
 		"@typescript/analyze-trace": "^0.10.1",
 		"@vitejs/plugin-react": "^4.1.0",
 		"@vitest/ui": "^0.34.6",
+		"cross-env": "^7.0.3",
 		"cspell": "^7.3.8",
 		"electron": "27.0.1",
 		"electron-devtools-assembler": "^1.2.0",
