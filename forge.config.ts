@@ -122,6 +122,18 @@ const config: ForgeConfig = {
 									{ recursive: true, force: true },
 								);
 							});
+						} else if (platform === 'darwin' || platform === 'linux') {
+							fs.unlinkSync(
+								path.join(
+									buildPath,
+									'node_modules',
+									'@serialport',
+									'bindings-cpp',
+									'build',
+									'node_gyp_bins',
+									'python3',
+								),
+							);
 						}
 
 						resolve();
