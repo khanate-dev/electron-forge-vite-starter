@@ -6,7 +6,7 @@ import installExtension, {
 } from 'electron-devtools-assembler';
 
 import { electronConfig } from './electron.config';
-import { setupIpc } from './ipc';
+import { setupIpc } from './setup-ipc';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) app.quit();
