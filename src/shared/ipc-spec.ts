@@ -153,10 +153,7 @@ type IpcMain = {
 const validateSender = (
 	event: Electron.IpcMainEvent | Electron.IpcMainInvokeEvent,
 ): boolean => {
-	// TODO Fix the path here
-	// return event.senderFrame.url === MAIN_WINDOW_VITE_DEV_SERVER_URL;
-	console.log({ url: event.senderFrame.url });
-	return true;
+	return event.senderFrame.parent === null;
 };
 
 export const ipcMain: IpcMain = {
