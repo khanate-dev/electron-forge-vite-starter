@@ -54,6 +54,6 @@
 		// completeness
 		"skipLibCheck": true
 	},
-	"exclude": ["node_modules", "dist", "build", ".vite"],
+	"exclude": ["node_modules", "out", ".vite"],
 	"include": ["**/*", "./.*.cjs"]
 }

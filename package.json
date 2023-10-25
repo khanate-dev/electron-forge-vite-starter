@@ -3,6 +3,12 @@
 	"productName": "electron-starter",
 	"version": "1.0.0",
 	"description": "Electron React Starter Application",
+	"keywords": [],
+	"author": {
+		"name": "Khanate",
+		"email": "dev@khanate.pk",
+		"url": "https://khante.pk"
+	},
 	"main": ".vite/build/main.js",
 	"scripts": {
 		"start": "cross-env DEV=1 electron-forge start",
@@ -20,12 +26,6 @@
 		"audit": "electronegativity -i ./",
 		"diag": "tsc --extendedDiagnostics",
 		"trace": "tsc --generateTrace ./trace && npx @typescript/analyze-trace trace"
-	},
-	"keywords": [],
-	"author": {
-		"name": "Khanate",
-		"email": "dev@khanate.pk",
-		"url": "https://khante.pk"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.11.1",
