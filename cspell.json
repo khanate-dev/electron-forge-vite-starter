@@ -33,6 +33,7 @@
 		"dist",
 		"public",
 		"trace",
+		"out",
 		".webpack",
 		".vite",
 		"**/*.{mp3,otf,icns}"
