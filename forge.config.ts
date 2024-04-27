@@ -5,8 +5,10 @@ import path from 'path';
 import { MakerDeb } from '@electron-forge/maker-deb';
 import { MakerSquirrel } from '@electron-forge/maker-squirrel';
 import { AutoUnpackNativesPlugin } from '@electron-forge/plugin-auto-unpack-natives';
+import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { VitePlugin } from '@electron-forge/plugin-vite';
 import { PublisherGithub } from '@electron-forge/publisher-github';
+import { FuseV1Options, FuseVersion } from '@electron/fuses';
 
 import { electronConfig } from './src/electron/electron.config';
 
@@ -69,6 +71,17 @@ const config: ForgeConfig = {
 			],
 		}),
 		new AutoUnpackNativesPlugin({}),
+		// Fuses are used to enable/disable various Electron functionality
+		// at package time, before code signing the application
+		new FusesPlugin({
+			version: FuseVersion.V1,
+			[FuseV1Options.RunAsNode]: false,
+			[FuseV1Options.EnableCookieEncryption]: true,
+			[FuseV1Options.EnableNodeOptionsEnvironmentVariable]: false,
+			[FuseV1Options.EnableNodeCliInspectArguments]: false,
+			[FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: true,
+			[FuseV1Options.OnlyLoadAppFromAsar]: true,
+		}),
 	],
 	// ? https://github.com/serialport/node-serialport/issues/2464#issuecomment-1516887882
 	hooks: {

@@ -420,7 +420,7 @@ export class FormSchema<
 				return {
 					...obj,
 					[key]:
-						typeof value === 'number' ? value.toString() : (value as never),
+						typeof value === 'number' ? value.toString() : (value),
 				};
 			},
 			{} as typeof this.defaultValues,
